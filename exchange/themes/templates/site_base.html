@@ -6,7 +6,7 @@
 
 {% block extra_head %}
   {% get_theme as theme %}
-  <link href="{% static "theme/css/site_base.css"%}" rel="stylesheet"/>
+
   <style>
     {% if theme.banner_logo %}
         .navbar-brand {
@@ -58,5 +58,7 @@
         <link href="{% static "css/django_classification_banner_overrides.css"%}" rel="stylesheet"/>
         {% classification_banner %}
     {% endif %}
+ <link href="{% static "theme/css/site_base.css"%}" rel="stylesheet"/>
     {{ block.super }}
+
 {% endblock %}
